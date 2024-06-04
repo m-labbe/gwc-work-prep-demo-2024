@@ -1,0 +1,20 @@
+[
+    {
+      "id": 1,
+      "name": "PS User",
+      "username": "psuser",
+      "ssn": "123-45-6789",
+      "phone": "801-555-0101",
+      "email": "psuser@example.com",
+      "address": "1212 PS Circle, Project, Learning, 55555"
+    },
+    {
+      "id": 2,
+      "name": "Admin User",
+      "username": "adminuser",
+      "ssn": "555-45-6789",
+      "phone": "444-555-6000",
+      "email": "adminuser@example.com",
+      "address": "1212 PS Circle, Project, Learning, 55555"
+    }
+  ]
