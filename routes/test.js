@@ -18,4 +18,15 @@ describe('Test routes', () => {
             .end(done);
     });
 
+    it('Gets all users data', (done) => {
+        request(app)
+            .get('/api/users/2')
+            .expect(200)
+            .expect((result) => {
+                expect(result.body.email).toBe("adminuser@example.com");
+                expect(result.body.username).toBe("adminuser");
+            })
+            .end(done);
+    });
+
 });
