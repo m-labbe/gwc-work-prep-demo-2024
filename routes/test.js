@@ -29,4 +29,13 @@ describe('Test routes', () => {
             .end(done);
     });
 
+    it('Responds with error if invalid user id', (done) =>
+        {
+            request(app)
+                .get('/api/users/frog')
+                .expect((result) => {
+                    expect(result.body.error).toBe("Specified User not found");
+                })
+                .end(done);
+        })
 });
