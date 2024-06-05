@@ -18,4 +18,24 @@ describe('Test routes', () => {
             .end(done);
     });
 
+    it('Gets all users data', (done) => {
+        request(app)
+            .get('/api/users/2')
+            .expect(200)
+            .expect((result) => {
+                expect(result.body.email).toBe("adminuser@example.com");
+                expect(result.body.username).toBe("adminuser");
+            })
+            .end(done);
+    });
+
+    it('Responds with error if invalid user id', (done) =>
+        {
+            request(app)
+                .get('/api/users/frog')
+                .expect((result) => {
+                    expect(result.body.error).toBe("Specified User not found");
+                })
+                .end(done);
+        })
 });
